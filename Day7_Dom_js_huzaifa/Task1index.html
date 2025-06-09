@@ -1,1 +1,26 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOM Selection Example</title>
+</head>
+<body>
+  <h1 id="main-heading">Original Heading</h1>
+  <p class="info-text">This is the original paragraph.</p>
+  <button id="changeButton">Click Me</button>
+
+  <script>
+    // DOM selection
+    const heading = document.getElementById('main-heading'); // using getElementById
+    const paragraph = document.querySelector('.info-text');  // using querySelector
+
+    // Event listener
+    document.getElementById('changeButton').addEventListener('click', function() {
+      heading.textContent = 'Heading has been changed!';
+      paragraph.textContent = 'The paragraph text is now updated.';
+    });
+  </script>
+</body>
+</html>
